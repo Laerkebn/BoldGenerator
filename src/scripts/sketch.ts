@@ -12,7 +12,8 @@ const setup = async (p5: typeof P5.prototype): Promise<void> => {
 const draw = (p5: typeof P5.prototype): void => {
 	const { currentFrame, circleRadius, circleSpeed, circleMovement } = controls;
 
-	p5.background("#ffffff");
+	p5.background("#D1B092");
+
 	p5.noStroke();
 
 	const centerX = p5.width * 0.5;
@@ -23,8 +24,18 @@ const draw = (p5: typeof P5.prototype): void => {
 		const x = circleMovement * p5.sin(currentFrame * randomSpeed) + p5.random(-centerX, centerX);
 		const y = circleMovement * p5.cos(currentFrame * randomSpeed) + p5.random(-centerY, centerY);
 
-		p5.fill(p5.random(0, 255), p5.random(0, 255), p5.random(0, 255));
-		p5.circle(centerX + x, centerY + y, circleRadius);
+		const colors = [
+  [82, 0, 0],  // rødlig
+  [112, 0, 0],  // grønlig
+  [140, 0, 0],  // blålig
+  [166, 0, 0],   // gul/orange
+  [199, 0, 0]   // lilla
+];
+
+let c = p5.random(colors);
+p5.fill(c[0], c[1], c[2]);
+
+		p5.rect(centerX + x, centerY + y, circleRadius);
 	}
 };
 

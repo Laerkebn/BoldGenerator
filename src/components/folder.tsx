@@ -13,7 +13,7 @@ const Folder: ParentComponent<Props> = (props) => (
 			<span class="after:content-['+'] group-open:after:content-['–']"></span>
 		</summary>
 
-		<div class="flex flex-col gap-y-3 p-2">{props.children}</div>
+		<div class="flex flex-col gap-y-3 p-5">{props.children}</div>
 	</details>
 );
 

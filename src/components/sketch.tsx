@@ -7,7 +7,7 @@ import { RangeInput } from "./inputs/range-input";
 const Sketch: VoidComponent = () => (
 	<Folder title="Sketch" open={true}>
 		<RangeInput
-			label="circle radius"
+			label="Radius"
 			min={1}
 			max={100}
 			step={0.1}
@@ -18,7 +18,7 @@ const Sketch: VoidComponent = () => (
 		/>
 
 		<RangeInput
-			label="circle speed"
+			label="Speed"
 			min={0.000_01}
 			max={0.1}
 			step={0.000_01}
@@ -29,7 +29,7 @@ const Sketch: VoidComponent = () => (
 		/>
 
 		<RangeInput
-			label="circle movement"
+			label="Movement"
 			min={1}
 			max={100}
 			step={1}

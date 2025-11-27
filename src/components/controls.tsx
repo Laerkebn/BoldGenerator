@@ -9,6 +9,7 @@ const LOCAL_STORAGE_KEY = `store-state-7`;
 /** Component for the floating controls */
 const Controls: VoidComponent = () => {
 	onMount(() => {
+		
 		// Load the controls state from localStorage
 		try {
 			const state = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -42,7 +43,11 @@ const Controls: VoidComponent = () => {
 
 	return (
 		<div
-			class="absolute top-0 left-0 m-2 flex max-h-[calc(100%-0.5rem)] w-96 translate-x-[calc(-100%-0.5rem)] flex-col gap-2 overflow-y-auto bg-white p-2 text-black transition-transform duration-300 [-ms-overflow-style:none] [-webkit-scrollbar-width:none] [scrollbar-width:none] data-menu:translate-x-0"
+			class="absolute top-0 left-0 m-2 flex max-h-[calc(100%-0.5rem)] w-64 
+			translate-x-[calc(-100%-0.5rem)] flex-col gap-2 overflow-y-auto
+			 bg-[#736253] p-2 text-black transition-transform duration-300 
+			 [-ms-overflow-style:none] [-webkit-scrollbar-width:none] 
+			 [scrollbar-width:none] data-menu:translate-x-0"
 			data-menu={internal.hideMenu ? undefined : ""}
 		>
 			<General />
